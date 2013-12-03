@@ -11,6 +11,10 @@ using ServiceStack.Logging;
 using System.Security.Cryptography;
 #endif
 
+#if MONOTOUCH || ANDROID
+using HttpStatusCode = ServiceStack.ServiceHost.HttpStatusCode;
+#endif
+
 #if NETFX_CORE
 using System.Net.Http.Headers;
 using Windows.Security.Cryptography;
@@ -134,7 +138,7 @@ namespace ServiceStack.ServiceClient.Web
             var webEx = ex as WebException;
             return (webEx != null
                     && webEx.Response != null
-                    && ((HttpWebResponse) webEx.Response).StatusCode == HttpStatusCode.Unauthorized
+				&& (int)((HttpWebResponse) webEx.Response).StatusCode == (int)HttpStatusCode.Unauthorized
                     && !String.IsNullOrEmpty(userName)
                     && !String.IsNullOrEmpty(password));
         }

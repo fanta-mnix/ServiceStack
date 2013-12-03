@@ -243,9 +243,6 @@
     <Compile Include="..\..\ServiceStack.Common\ServiceClient.Web\ServiceClientBase.cs">
       <Link>ServiceClient.Web\ServiceClientBase.cs</Link>
     </Compile>
-    <Compile Include="..\..\ServiceStack.Common\ServiceClient.Web\Soap11ServiceClient.cs">
-      <Link>ServiceClient.Web\Soap11ServiceClient.cs</Link>
-    </Compile>
     <Compile Include="..\..\ServiceStack.Common\ServiceClient.Web\WcfServiceClient.cs">
       <Link>ServiceClient.Web\WcfServiceClient.cs</Link>
     </Compile>
@@ -420,9 +417,9 @@
       <Project>{1137B5AC-2259-413C-A473-93721D2A7551}</Project>
       <Name>ServiceStack.Text.MonoTouch</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ServiceStack.Interfaces.MonoTouch\ServiceStack.Interfaces.MonoTouch.csproj">
-      <Project>{4E0544B6-8D34-45D2-AB27-605F51BF4C55}</Project>
-      <Name>ServiceStack.Interfaces.MonoTouch</Name>
+    <ProjectReference Include="..\..\ServiceStack.Interfaces\ServiceStack.Interfaces.PCL.csproj">
+      <Project>{A9A1CA9E-F399-490F-AAA3-DC668DAAB3C0}</Project>
+      <Name>ServiceStack.Interfaces.PCL</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

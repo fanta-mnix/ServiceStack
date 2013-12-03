@@ -4,6 +4,10 @@ using System.Net;
 using ServiceStack.ServiceHost;
 using ServiceStack.ServiceInterface.ServiceModel;
 
+#if MONOTOUCH || ANDROID
+using HttpStatusCode = ServiceStack.ServiceHost.HttpStatusCode;
+#endif
+
 namespace ServiceStack.Common.Web
 {
     public class HttpError : Exception, IHttpError
@@ -66,7 +70,7 @@ namespace ServiceStack.Common.Web
         
         public int Status { get; set; }
 
-        public HttpStatusCode StatusCode
+		public HttpStatusCode StatusCode
         {
             get { return (HttpStatusCode)Status; }
             set { Status = (int)value; }

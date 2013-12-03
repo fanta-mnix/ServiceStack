@@ -21,8 +21,10 @@ namespace ServiceStack.Messaging
              if (endpointUrl.IndexOf("format=jsv") >= 0)
                  return new JsvServiceClient(endpointUrl);
 
-             if (endpointUrl.IndexOf("format=soap11") >= 0)
-                 return new Soap11ServiceClient(endpointUrl);
+#if !MONOTOUCH && !ANDROID
+			if(endpointUrl.IndexOf("format=soap11") >= 0)
+				return new Soap11ServiceClient(endpointUrl);
+#endif
 
 #if !(SILVERLIGHT || MONOTOUCH || XBOX || __ANDROID__)
              if (endpointUrl.IndexOf("format=soap12") >= 0)

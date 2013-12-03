@@ -28,7 +28,7 @@ namespace ServiceStack.ServiceClient.Web
      * http://msdn.microsoft.com/en-us/library/86wf6409(VS.71).aspx
      */
     public abstract class ServiceClientBase
-#if !SILVERLIGHT
+#if !SILVERLIGHT && !MONOTOUCH
  : IServiceClient, IRestClient
 #else
         : IServiceClient

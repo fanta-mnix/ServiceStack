@@ -5,6 +5,10 @@ using System.Net;
 using ServiceStack.Service;
 using ServiceStack.ServiceHost;
 
+#if MONOTOUCH || ANDROID
+using HttpStatusCode = ServiceStack.ServiceHost.HttpStatusCode;
+#endif
+
 namespace ServiceStack.Common.Web
 {
     public class CompressedResult

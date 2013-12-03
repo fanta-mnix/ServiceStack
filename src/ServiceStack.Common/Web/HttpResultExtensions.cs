@@ -6,6 +6,10 @@ using ServiceStack.Common.Utils;
 using ServiceStack.ServiceHost;
 using ServiceStack.ServiceInterface.ServiceModel;
 
+#if MONOTOUCH || ANDROID
+using HttpStatusCode = ServiceStack.ServiceHost.HttpStatusCode;
+#endif
+
 namespace ServiceStack.Common.Web
 {
     public static class HttpResultExtensions
