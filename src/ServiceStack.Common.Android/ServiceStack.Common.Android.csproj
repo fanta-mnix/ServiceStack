@@ -39,6 +39,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Net" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.ServiceModel.Web" />
@@ -431,9 +432,9 @@
       <Project>{56838CD4-8EBC-4860-A3E1-1697875BBC61}</Project>
       <Name>ServiceStack.Text.Android</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ServiceStack.Interfaces.Android\ServiceStack.Interfaces.Android.csproj">
-      <Project>{05A5DDBF-A1A2-4B28-9FF0-C07060A8AEFC}</Project>
-      <Name>ServiceStack.Interfaces.Android</Name>
+    <ProjectReference Include="..\ServiceStack.Interfaces\ServiceStack.Interfaces.PCL.csproj">
+      <Project>{a9a1ca9e-f399-490f-aaa3-dc668daab3c0}</Project>
+      <Name>ServiceStack.Interfaces.PCL</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />

@@ -113,3 +113,6 @@ namespace ServiceStack.ServiceHost
     }
 }
 #endif
+#if PCL
+public class NameValueCollection : Dictionary<string, string> { }
+#endif

@@ -1,4 +1,5 @@
-﻿using System;
+﻿#if !PCL
+using System;
 using System.Data;
 
 namespace ServiceStack.OrmLite
@@ -24,4 +25,5 @@ namespace ServiceStack.OrmLite
             return connectionFactoryFn();
         }
     }
-}
+} 
+#endif

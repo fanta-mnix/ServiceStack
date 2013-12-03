@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿#if !PCL
+using System.Data;
 
 namespace ServiceStack.OrmLite
 {
@@ -8,3 +9,4 @@ namespace ServiceStack.OrmLite
         IDbConnection CreateDbConnection();
     }
 }
+#endif

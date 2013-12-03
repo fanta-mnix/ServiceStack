@@ -48,7 +48,9 @@ namespace ServiceStack.Logging.Support.Logging
             {
                 msg += ", Exception: " + exception.Message;
             }
-            Console.WriteLine(msg);
+#if !PCL
+            Console.WriteLine(msg); 
+#endif
         }
 
         /// <summary>
@@ -59,7 +61,9 @@ namespace ServiceStack.Logging.Support.Logging
         private static void LogFormat(object message, params object[] args)
         {
             string msg = message == null ? string.Empty : message.ToString();
-            Console.WriteLine(msg, args);
+#if !PCL
+            Console.WriteLine(msg, args); 
+#endif
         }
 
         /// <summary>
@@ -69,7 +73,9 @@ namespace ServiceStack.Logging.Support.Logging
         private static void Log(object message)
         {
             string msg = message == null ? string.Empty : message.ToString();
-            Console.WriteLine(msg);
+#if !PCL
+            Console.WriteLine(msg); 
+#endif
         }
 
         public void Debug(object message, Exception exception)

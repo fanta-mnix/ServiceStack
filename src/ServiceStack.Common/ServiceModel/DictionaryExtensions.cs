@@ -7,7 +7,7 @@ namespace ServiceStack.ServiceModel
 {
     public static class DictionaryExtensions
     {
-        public static Dictionary<string, string> ToDictionary(this NameValueCollection nameValues)
+        public static Dictionary<string, string> ToDictionary(this System.Collections.Specialized.NameValueCollection nameValues)
         {
             if (nameValues == null) return new Dictionary<string, string>();
 

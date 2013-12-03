@@ -14,13 +14,13 @@ namespace ServiceStack.Service
         TResponse Send<TResponse>(IReturn<TResponse> request);
 	    void Send(IReturnVoid request);
 
-#if !NETFX_CORE
+#if !NETFX_CORE && !PCL
 		TResponse PostFile<TResponse>(string relativeOrAbsoluteUrl, FileInfo fileToUpload, string mimeType);
 #endif
 
         TResponse PostFile<TResponse>(string relativeOrAbsoluteUrl, Stream fileToUpload, string fileName, string mimeType);
 
-#if !NETFX_CORE
+#if !NETFX_CORE && !PCL
         TResponse PostFileWithRequest<TResponse>(string relativeOrAbsoluteUrl, FileInfo fileToUpload, object request);
 #endif
 

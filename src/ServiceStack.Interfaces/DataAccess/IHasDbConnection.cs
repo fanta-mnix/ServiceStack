@@ -1,4 +1,4 @@
-﻿#if !SILVERLIGHT && !XBOX
+﻿#if !SILVERLIGHT && !XBOX && !PCL
 using System.Data;
 
 namespace ServiceStack.DataAccess

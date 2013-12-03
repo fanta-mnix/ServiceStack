@@ -7,7 +7,7 @@ namespace ServiceStack.ServiceModel.Extensions
 {
     public static class DictionaryExtensions
     {
-        public static Dictionary<string, string> ToDictionary(this NameValueCollection nameValues)
+        public static Dictionary<string, string> ToDictionary(this System.Collections.Specialized.NameValueCollection nameValues)
         {
             var map = new Dictionary<string, string>();
             foreach (var key in nameValues.AllKeys)

@@ -96,7 +96,7 @@ namespace ServiceStack.ServiceClient.Web
 #if NETFX_CORE || WINDOWS_PHONE || SILVERLIGHT
         public Dictionary<string, string> Headers { get; private set; } 
 #else
-        public NameValueCollection Headers { get; private set; }
+        public System.Collections.Specialized.NameValueCollection Headers { get; private set; }
 #endif
 
         public const string DefaultHttpMethod = "POST";
@@ -121,7 +121,7 @@ namespace ServiceStack.ServiceClient.Web
 #if NETFX_CORE || WINDOWS_PHONE || SILVERLIGHT
             this.Headers = new Dictionary<string, string>();
 #else
-            this.Headers = new NameValueCollection();
+            this.Headers = new System.Collections.Specialized.NameValueCollection();
 #endif
 
 #if SILVERLIGHT

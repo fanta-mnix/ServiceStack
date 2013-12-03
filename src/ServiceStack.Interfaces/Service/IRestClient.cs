@@ -26,11 +26,11 @@ namespace ServiceStack.Service
 	    void Patch(IReturnVoid request);
 		TResponse Patch<TResponse>(string relativeOrAbsoluteUrl, object request);
 
-#if !NETFX_CORE
+#if !NETFX_CORE && !PCL
 		TResponse PostFile<TResponse>(string relativeOrAbsoluteUrl, FileInfo fileToUpload, string mimeType);
 #endif
 
-	    void CustomMethod(string httpVerb, IReturnVoid request);
+        void CustomMethod(string httpVerb, IReturnVoid request);
 	    TResponse CustomMethod<TResponse>(string httpVerb, IReturn<TResponse> request);
 
         HttpWebResponse Head(IReturn request);

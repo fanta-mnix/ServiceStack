@@ -1,0 +1,1 @@
+ServiceStack.Interfaces.Android.csproj has moved to a PCL: ServiceStack.Interfaces.PCL.csproj

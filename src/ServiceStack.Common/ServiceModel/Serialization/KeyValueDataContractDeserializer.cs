@@ -9,7 +9,7 @@ namespace ServiceStack.ServiceModel.Serialization
     {
         public static KeyValueDataContractDeserializer Instance = new KeyValueDataContractDeserializer();
 
-        public object Parse(NameValueCollection nameValues, Type returnType)
+        public object Parse(System.Collections.Specialized.NameValueCollection nameValues, Type returnType)
         {
             return Parse(nameValues.ToDictionary(), returnType);
         }

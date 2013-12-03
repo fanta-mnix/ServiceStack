@@ -17,14 +17,14 @@ namespace ServiceStack.DataAccess
 		public DataAccessException(string message, Exception innerException) 
 			: base(message, innerException)
 		{
-		}
+        }
 
-#if !SILVERLIGHT && !MONOTOUCH && !XBOX
+#if !SILVERLIGHT && !MONOTOUCH && !XBOX && !PCL
 		protected DataAccessException(SerializationInfo info, StreamingContext context) 
 			: base(info, context)
 		{
 		}
 #endif
 
-	}
+    }
 }
