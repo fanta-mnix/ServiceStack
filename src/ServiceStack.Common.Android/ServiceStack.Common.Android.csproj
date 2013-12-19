@@ -31,7 +31,6 @@
     <DefineConstants>TRACE;ANDROID</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
     <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
   </PropertyGroup>
   <ItemGroup>
@@ -433,7 +432,7 @@
       <Name>ServiceStack.Text.Android</Name>
     </ProjectReference>
     <ProjectReference Include="..\ServiceStack.Interfaces\ServiceStack.Interfaces.PCL.csproj">
-      <Project>{a9a1ca9e-f399-490f-aaa3-dc668daab3c0}</Project>
+      <Project>{A9A1CA9E-F399-490F-AAA3-DC668DAAB3C0}</Project>
       <Name>ServiceStack.Interfaces.PCL</Name>
     </ProjectReference>
   </ItemGroup>
