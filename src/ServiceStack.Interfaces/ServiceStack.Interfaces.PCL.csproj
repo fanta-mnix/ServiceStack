@@ -221,6 +221,7 @@
     <Compile Include="ServiceHost\RestrictAttribute.cs" />
     <Compile Include="ServiceHost\RestServiceAttribute.cs" />
     <Compile Include="ServiceHost\RouteAttribute.cs" />
+    <Compile Include="ServiceInterface.ServiceModel\AbstractWebServiceException.cs" />
     <Compile Include="ServiceInterface.ServiceModel\CollectionTypes.cs" />
     <Compile Include="ServiceInterface.ServiceModel\ErrorResponse.cs" />
     <Compile Include="ServiceInterface.ServiceModel\ICacheByDateModified.cs" />

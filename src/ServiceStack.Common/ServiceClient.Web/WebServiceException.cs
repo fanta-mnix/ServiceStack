@@ -12,21 +12,37 @@ namespace ServiceStack.ServiceClient.Web
     [Serializable]
 #endif
     public class WebServiceException
+#if ANDROID || MONOTOUCH
+        : AbstractWebServiceException
+#else
         : Exception
+#endif
     {
         public WebServiceException() { }
         public WebServiceException(string message) : base(message) { }
         public WebServiceException(string message, Exception innerException) : base(message, innerException) { }
-#if !NETFX_CORE && !WINDOWS_PHONE && !SILVERLIGHT
+#if !NETFX_CORE && !WINDOWS_PHONE && !SILVERLIGHT && !ANDROID && !MONOTOUCH
         public WebServiceException(SerializationInfo info, StreamingContext context) : base(info, context) { }
 #endif
 
+#if ANDROID || MONOTOUCH
+        override
+#endif
         public int StatusCode { get; set; }
 
+#if ANDROID || MONOTOUCH
+        override
+#endif
         public string StatusDescription { get; set; }
 
+#if ANDROID || MONOTOUCH
+        override
+#endif
         public object ResponseDto { get; set; }
-        
+
+#if ANDROID || MONOTOUCH
+        override
+#endif
         public string ResponseBody { get; set; }
 
         private string errorCode;
@@ -87,6 +103,9 @@ namespace ServiceStack.ServiceClient.Web
             }
         }
 
+#if ANDROID || MONOTOUCH
+        override
+#endif
         public string ErrorCode
         {
             get
@@ -100,6 +119,9 @@ namespace ServiceStack.ServiceClient.Web
         }
 
         private string errorMessage;
+#if ANDROID || MONOTOUCH
+        override
+#endif
         public string ErrorMessage
         {
             get
@@ -113,6 +135,9 @@ namespace ServiceStack.ServiceClient.Web
         }
 
         private string serverStackTrace;
+#if ANDROID || MONOTOUCH
+        override
+#endif
         public string ServerStackTrace
         {
             get
@@ -125,6 +150,9 @@ namespace ServiceStack.ServiceClient.Web
             }
         }
 
+#if ANDROID || MONOTOUCH
+        override
+#endif
         public ResponseStatus ResponseStatus
         {
             get
