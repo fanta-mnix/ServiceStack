@@ -413,13 +413,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\ServiceStack.Text\src\ServiceStack.Text.MonoTouch\ServiceStack.Text.MonoTouch\ServiceStack.Text.MonoTouch.csproj">
-      <Project>{1137B5AC-2259-413C-A473-93721D2A7551}</Project>
-      <Name>ServiceStack.Text.MonoTouch</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\ServiceStack.Interfaces\ServiceStack.Interfaces.PCL.csproj">
       <Project>{A9A1CA9E-F399-490F-AAA3-DC668DAAB3C0}</Project>
       <Name>ServiceStack.Interfaces.PCL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\ServiceStack.Text\src\ServiceStack.Text.MonoTouch\ServiceStack.Text.MonoTouch\ServiceStack.Text.MonoTouch.csproj">
+      <Project>{1137B5AC-2259-413C-A473-93721D2A7551}</Project>
+      <Name>ServiceStack.Text.MonoTouch</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>
